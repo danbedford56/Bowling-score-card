@@ -12,6 +12,15 @@ describe('BowlingCard', function(){
     });
   });
 
+  describe('turn_total', function(){
+    it('can total a single turn', function(){
+      bowling_card.turn(3, 4);
+      bowling_card.turn(2, 1);
+      bowling_card.turn(5, 1);
+      expect(bowling_card.turn_total(1)).toEqual(3);
+    });
+  });
+
   describe('totalScores', function(){
     it('Can total the scores', function(){
       bowling_card.turn(3, 4);

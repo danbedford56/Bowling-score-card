@@ -52,6 +52,14 @@ class BowlingCard{
     this.totalScores();
   }
 
+  turn_total(turn){
+    var sum = 0;
+    for(var i=0; i<3; i++){
+      sum += this._scores[turn][i]
+    }
+    return sum;
+  }
+
   totalScores(){
     this._total_score = 0;
     for (var i = 0; i < this._turn; i++){
