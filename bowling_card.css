@@ -1,0 +1,22 @@
+#strike {
+  animation:strike 2s infinite;
+  visibility: hidden;
+  transform-origin: center center;
+  text-align: center;
+  margin-top: 100px;
+}
+
+#card {
+  text-align: center;
+}
+
+#submit_turn {
+  position: relative;
+  margin-left: 10px;
+}
+
+@keyframes strike {
+  0% {color: red; font-size: 100px;}
+  50% {color: orange; font-size: 25px;}
+  100% {color: red; font-size: 100px;}
+}
