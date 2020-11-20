@@ -18,18 +18,11 @@ class BowlingCard{
     return this._scores[this._turn - 2][0] === 10;
   }
 
-  get_total_score(){
-    return this._total_score;
-  }
-
   get_turn(){
     return this._turn;
   }
 
   turn(roll1, roll2){
-    if (roll1 + roll2 > 10){
-      throw new Error("INVALID TURN! YOU CHEAT!")
-    }
     this._scores[this._turn] = [roll1, roll2, 0]
     // Only check for strike/spare if not first turn
     if(this._turn >= 1){
@@ -52,10 +45,21 @@ class BowlingCard{
     this.totalScores();
   }
 
+  bonus_turn(roll1, roll2){
+    if (this._scores[8][0] == 10){
+      this._scores[8][2] += roll1;
+    }
+    this._scores[this._turn] = [roll1, roll2, 0]
+    this._turn += 1;
+    this.totalScores();
+  }
+
   turn_total(turn){
     var sum = 0;
-    for(var i=0; i<3; i++){
-      sum += this._scores[turn][i]
+    for(var j = 0; j < turn + 1; j++){
+      for(var i=0; i<3; i++){
+        sum += this._scores[j][i]
+      }
     }
     return sum;
   }

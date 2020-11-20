@@ -92,11 +92,41 @@
       <div id='score11'>-</div>
     </div>
     <button id='submit_turn'>Submit turn</button>
-    <br>
-    <div id='score' style='margin-left: 50px;'>Score: 0</div>
   </div>
-  <div id='strik'>
-    <h1>STRIKE!</h1>
+  <div id='strike_animation' style='visibility: visible;'>
+    <div id='ball'></div>
+    <div class='pin' id="pin1" style='top: -7.5px; left: 300px;'></div>
+
+    <div class='pin' id="pin2" style='top: -15px; left: 300px;'></div>
+    <div class='pin' id="pin3" style='top: 0px; left: 286.175px;'></div>
+
+    <div class='pin' id="pin4" style='top: -7.5px; left: 286.125px;'></div>
+    <div class='pin' id="pin5" style='top: -22.5px; left: 272.35px;'></div>
+    <div class='pin' id="pin6" style='top: 7.5px; left: 258.375px;'></div>
+
+    <div class='pin' id="pin7" style='top: -15px; left: 258.525px;'></div>
+    <div class='pin' id="pin8" style='top: 0px; left: 244.55px;'></div>
+    <div class='pin' id="pin9" style='top: -30px; left: 230.725px;'></div>
+    <div class='pin' id="pin10" style='top: 15px; left: 216.9px;'></div>
+
+    <div id='knocked1' style='visibility: hidden;'>
+      <img src="../images/pin3.png" class='knocked' alt="pin" width="20" height="25" style='left: 325px; top: -30px; transform: rotateZ(20deg);'>
+    </div>
+    <div id='knocked2' style='visibility: hidden;'>
+      <img src="../images/pin3.png" class='knocked' alt="pin" width="20" height="25" style='left: 340px; top: -70px; transform: rotateZ(35deg);'>
+      <img src="../images/pin3.png" class='knocked' alt="pin" width="20" height="25" style='left: 315px; top: -40px; transform: rotateZ(155deg);'>
+    </div>
+    <div id='knocked3' style='visibility: hidden;'>
+      <img src="../images/pin3.png" class='knocked' alt="pin" width="20" height="25" style='left: 355px; top: -105px; transform: rotateZ(35deg);'>
+      <img src="../images/pin3.png" class='knocked' alt="pin" width="20" height="25" style='left: 335px; top: -85px; transform: rotateZ(90deg);'>
+      <img src="../images/pin3.png" class='knocked' alt="pin" width="20" height="25" style='left: 305px; top: -60px; transform: rotateZ(145deg);'>
+    </div>
+    <div id='knocked4' style='visibility: hidden;'>
+      <img src="../images/pin3.png" class='knocked' alt="pin" width="20" height="25" style='left: 375px; top: -135px; transform: rotateZ(90deg);'>
+      <img src="../images/pin3.png" class='knocked' alt="pin" width="20" height="25" style='left: 350px; top: -120px; transform: rotateZ(55deg);'>
+      <img src="../images/pin3.png" class='knocked' alt="pin" width="20" height="25" style='left: 325px; top: -105px; transform: rotateZ(110deg);'>
+      <img src="../images/pin3.png" class='knocked' alt="pin" width="20" height="25" style='left: 300px; top: -90px; transform: rotateZ(90deg);'>
+    </div>
   </div>
   <script type="text/javascript" src='../src/bowling_card.js'></script>
   <script type="text/javascript" src='../src/interface.js'></script>
