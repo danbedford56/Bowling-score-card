@@ -75,6 +75,7 @@ function validate(roll1, roll2, turn){
 function check_strike_or_spare(roll1, roll2){
   if (bowling_card.get_turn() + 1 == 12){
     if (roll1.value == 10){
+      strike_animation();
       roll1.value = "X"
     }
     if (roll2.value == 10){
@@ -114,6 +115,7 @@ function strike_animation(){
   var ball_pos = 0;
 
   roll_sound.play();
+  document.getElementById('submit_turn').disabled = true;
   var id = setInterval(frame, 10);
   function frame() {
     if (ball_pos == 320){
@@ -134,6 +136,7 @@ function strike_animation(){
     }
     if (ball_pos == 700) {
       clearInterval(id);
+      document.getElementById('submit_turn').disabled = false;
       document.getElementById('strike_animation').style.visibility = 'hidden';
       document.getElementById('knocked1').style.visibility = 'hidden';
       document.getElementById('knocked2').style.visibility = 'hidden';
